@@ -17,7 +17,7 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+      ["There are only two great tragedies in life: one is not getting what you want and the other is getting it. -Oscar Wilde", "Acummalation is the scariest thing. -Noman Ashraf", "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning. -Albert Einstein", "Life can only be understood backwards; but it must be lived forwards.”-Søren Kierkegaard"];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];

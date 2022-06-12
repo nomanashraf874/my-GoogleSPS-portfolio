@@ -16,13 +16,22 @@
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
-  const greetings =
-      ["There are only two great tragedies in life: one is not getting what you want and the other is getting it. -Oscar Wilde", "Acummalation is the scariest thing. -Noman Ashraf", "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning. -Albert Einstein", "Life can only be understood backwards; but it must be lived forwards.”-Søren Kierkegaard"];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+    const greetings =
+        ["There are only two great tragedies in life: one is not getting what you want and the other is getting it. -Oscar Wilde", "Acummalation is the scariest thing. -Noman Ashraf", "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning. -Albert Einstein", "Life can only be understood backwards; but it must be lived forwards.”-Søren Kierkegaard"];
+  
+    // Pick a random greeting.
+    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+    // Add it to the page.
+    const greetingContainer = document.getElementById('greeting-container');
+    greetingContainer.innerText = greeting;
+  }
+  
+ 
+async function showGreeting() {
+    const responseFromServer = await fetch('/hello');
+    const greet = await responseFromServer.json();
+    const greetings =  [greet.lang0, greet.lang1, greet.lang2,greet.lang3, greet.lang4] 
+    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+    const greetContainer = document.getElementById('quote-container');
+    greetContainer.innerText = greeting;
 }

@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js">
+        document.getElementById("defaultOpen").click();
+    </script>
   </head>
   <body>
-    <form action="/form-handler" method="POST">
+    <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('News', this, 'green')">Wisdom</button>
+    <div id="Home" class="tabcontent">
+      <button onclick="message()"><img class="para3" src=/images/mes.png ></button>
+    <form action="/form-handler" method="POST" id="third">
         <p>Name:</p>
         <input type="text" id="name-input" name="name-input" placeholder="Your name..">
         <p>Email:</p>
@@ -20,17 +26,33 @@
     </form>
     <div id="content">
       <h1 >Hi. I'm Noman Ashraf.<br>A developer in the works!</h1>
-      <img  src=/images/coder.jpeg width="300" height="300">
-      <p1>I am a sophomore studying computer <br>Science at Hunter College👨‍💻. Currently<br> dabbling in IOS and web development.<br> </p1>
-      <p2>Click <a href="/hello">here</a> to see content created by server code. <br> </p2>
-      <button onclick="showGreeting()">Get greeting</button>
+      <img  class="img1" src=/images/coder.jpeg width="300" height="300">
+      <p1 >I am a sophomore studying computer <br>Science at Hunter College👨‍💻. Currently<br> dabbling in IOS and web development.<br> </p1>
+      <p2 >Click <a href="/hello">here</a> to see content created by server code. <br> </p2>
+      <button onclick="showGreeting()" class="button1" >Get greeting</button>
       <p id="quote-container"></p>
-      <p3>Click here for a word of:<br> </p3>
-      <button onclick="addRandomGreeting()">Wisdom</button>
-      <div id="greeting-container"></div>
-      <p5>More Info: <br> </p5>
+      <p5 >More Info: <br> </p5>
       <a  href="https://github.com/nomanashraf874"><img class="para1" src=/images/GitHub.png ></a>
       <a href="https://www.linkedin.com/in/noman-ashraf-59922b222"><img class="para2" src=/images/LinkedIn.png ></a>
     </div>
+    </div>
+    
+    <div id="News" class="tabcontent">
+      <h2 class="h2">Do… or do not. There is no try.</h2>
+      <img  id="img2" src=/images/ball1@3x.png >
+      <img  class="img3" src=/images/yoda.png >
+      <button onclick="Random8ball()" class="button3">Ask</button>
+      <p3 >Click here for a word of:<br> </p3>
+      <button onclick="addRandomGreeting()" class="button2">Wisdom</button>
+      <div id="greeting-container"></div>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="zh">Chinese</option>
+        <option value="es">Spanish</option>
+        <option value="hi">Hindi</option>
+        <option value="ar">Arabic</option>
+      </select>
+    </div>
+   
   </body>
 </html>

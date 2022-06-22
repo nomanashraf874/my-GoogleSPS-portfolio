@@ -20,11 +20,9 @@ public class HelloWorldServlet extends HttpServlet {
     greetings.add("Bonjour!");
     greetings.add("Hola!");
     greetings.add("Guten tag!");
-    greetings.add("Salve");
+    greetings.add("Salve!");
     
     String json = convertToJson(greetings);
-    
-
     String type = "application/json;";
     response.setContentType(type);
     response.getWriter().println(json);
@@ -38,13 +36,13 @@ public class HelloWorldServlet extends HttpServlet {
     json += "\"" + greetings.get(1) + "\"";
     json += ", ";
     json += "\"lang2\": ";
-    json += greetings.get(2);
+    json += "\"" + greetings.get(2) + "\"";
     json += ", ";
     json += "\"lang3\": ";
-    json += greetings.get(3);
+    json += "\"" + greetings.get(3) + "\"";
     json += ", ";
     json += "\"lang4\": ";
-    json += greetings.get(4);
+    json += "\"" + greetings.get(4) + "\"";
     json += "}";
     return json;
   }

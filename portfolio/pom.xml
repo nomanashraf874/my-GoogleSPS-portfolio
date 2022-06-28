@@ -16,17 +16,21 @@
 
     <!-- Project-specific properties -->
     <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
-    <googleCloudProjectId>YOUR_PROJECT_ID_HERE</googleCloudProjectId>
+    <googleCloudProjectId>nashraf-sps-summer22</googleCloudProjectId>
   </properties>
 
   <dependencies>
     <!-- Java Servlets API -->
     <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>google-cloud-translate</artifactId>
+      <version>1.70.0</version>
+    </dependency>
+    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>4.0.1</version>
     </dependency>
-
     <!-- Jetty -->
     <dependency>
       <groupId>org.eclipse.jetty</groupId>

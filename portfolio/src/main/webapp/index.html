@@ -9,39 +9,44 @@
     </script>
   </head>
   <body>
-    <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('Home', this, 'black')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('About Me', this, '#feda4a')" id="defaultOpen">About Me</button>    
     <button class="tablink" onclick="openPage('News', this, 'green')">Wisdom</button>
     <div id="Home" class="tabcontent">
       <button onclick="message()"><img class="para3" src=/images/mes.png ></button>
     <form action="/form-handler" method="POST" id="third">
-        <p>Name:</p>
+        <p  >Name:</p>
         <input type="text" id="name-input" name="name-input" placeholder="Your name..">
-        <p>Email:</p>
+        <p >Email:</p>
         <input type="text" id="email-input" name="email-input" placeholder="Your name..">
         <br/>
-        <p>Message:</p>
+        <p >Message:</p>
         <textarea name="text-input" placeholder="Write something.."></textarea>
         <br/>
         <input type="submit" />
     </form>
     <div id="content">
-      <h1 >Hi. I'm Noman Ashraf.<br>A developer in the works!</h1>
+      <h1 class="glow">Hi. I'm Noman Ashraf.<br>A developer in the works!</h1>
       <img  class="img1" src=/images/coder.jpeg width="300" height="300">
       <p1 >I am a sophomore studying computer <br>Science at Hunter College👨‍💻. Currently<br> dabbling in IOS and web development.<br> </p1>
       <p2 >Click <a href="/hello">here</a> to see content created by server code. <br> </p2>
       <button onclick="showGreeting()" class="button1" >Get greeting</button>
       <p id="quote-container"></p>
       <p5 >More Info: <br> </p5>
-      <a  href="https://github.com/nomanashraf874"><img class="para1" src=/images/GitHub.png ></a>
+      <a  href="https://github.com/nomanashraf874"><img class="para1" src=/images/githubWhite.png ></a>
       <a href="https://www.linkedin.com/in/noman-ashraf-59922b222"><img class="para2" src=/images/LinkedIn.png ></a>
     </div>
     </div>
     
     <div id="News" class="tabcontent">
-      <h2 class="h2">Do… or do not. There is no try.</h2>
-      <img  id="img2" src=/images/ball1@3x.png >
+      <h1 class="h2">Do… or do not. There is no try.</h1>
       <img  class="img3" src=/images/yoda.png >
-      <button onclick="Random8ball()" class="button3">Ask</button>
+      <audio id="audio1" src="/audio/Can not be done.mp3"></audio>
+      <audio id="audio2" src="/audio/Difficult to see.mp3"></audio>
+      <audio id="audio3" src="/audio/difficult.mov"></audio>
+      <audio id="audio4" src="/audio/No no no.mp3"></audio>
+      <audio id="audio5" src="/audio/Yes.mp3"></audio>
+      <button onclick="play()" class="button3">Ask Anything</button>
       <p3 >Click here for a word of:<br> </p3>
       <button onclick="addRandomGreeting()" class="button2">Wisdom</button>
       <div id="greeting-container"></div>
@@ -52,6 +57,24 @@
         <option value="hi">Hindi</option>
         <option value="ar">Arabic</option>
       </select>
+    </div>
+    <div id="About Me" class="tabcontent2">
+        <section class="star-wars">
+
+            <div class="crawl">
+              
+              <div class="title">
+                <p>About Me:</p>
+                <h1>Noman Ashraf</h1>
+              </div>
+              
+              <p>I'm your typical 19 year old CS student. My hobbies are American handball, gym and coding. For those who dont know handball is hitting a ball on a wall pretty self explanatory but once you start playing you won't be able to quit.</p>     
+              <p>I have been coding for 2 years now and proficient with IOS development and this my first experience with web development.</p>
+              <p>This is what excites me about coding being able to see my creations and progress and the potential of it is endless with the introduction of things like metaverse and cryto. I look forward to meeting and working with you along this long and exciting journey!</p>
+          
+            </div>
+          
+          </section>
     </div>
    
   </body>

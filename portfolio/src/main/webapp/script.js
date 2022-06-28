@@ -13,7 +13,11 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * <audio id="sound1" src="yoursound.mp3" preload="auto"></audio>
+  <button onclick="document.getElementById('sound1').play();">Play
+  it</button>
+
+  Incase i wanna add audio.
  */
  function addRandomGreeting() {
     const greetings =
@@ -83,4 +87,10 @@ function openPage(pageName,elmnt,color) {
       const balls=['/images/ball1@3x.png','/images/ball2@3x.png','/images/ball3@3x.png','/images/ball4@3x.png','/images/ball5@3x.png'];
       const ball=balls[Math.floor(Math.random() * balls.length)];
       document.getElementById('img2').src=ball;
+  }
+  function play() {
+    const audios=["audio1","audio2","audio3","audio4","audio5"];
+    const audio=audios[Math.floor(Math.random() * audios.length)];
+    var audion = document.getElementById(audio);
+    audion.play();
   }
